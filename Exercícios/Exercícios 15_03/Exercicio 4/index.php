@@ -5,8 +5,8 @@
 </head>
 <body>
     <form action="resposta.php" method="post">
-        <Label>Distância percorrida</Label><br/>
-        <input type="number" name="distpercorrida" value="Ex: 130"><br/>
+        <Label>Nome aluno</Label><br/>
+        <input type="text" name="nomealuno"><br/>
         <Label>Nota da primeira prova</Label><br/>
         <input type="number" name="notaprimprova"><br/>
         <Label>Nota da Segunda prova</Label><br/>
@@ -17,8 +17,9 @@
     </form>
     <div id="resposta">
             <?php include("resposta.php");
-            if (isset($_POST["combmedio"])) {
-                echo $combmedio;
+            if (isset($_POST["medianotas"]) && isset($_POST["nomealuno"])) {
+                echo $nomealuno;
+                echo $medianotas;
             }
             ?>
         </div>

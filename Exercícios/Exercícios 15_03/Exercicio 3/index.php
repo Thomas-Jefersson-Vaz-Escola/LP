@@ -12,11 +12,12 @@
         <input type="submit" Value="Enviar">
     </form>
     <div id="resposta">
-            <?php
-            if (isset($_POST["combmedio"])) {
-                echo $combmedio;
-            }
-            ?>
+           
         </div>
 </body>
 </html>
+<?php
+    if (isset($_POST["combmedio"])) {
+        echo $combmedio;
+    }
+?>
